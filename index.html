@@ -26,9 +26,12 @@
 
 	<script type="text/javascript">
 		function klik(){
-			var x = " ";
-			document.getElementById("inputID").value = x;
-			document.getElementById("i").style.color = "red";
+			var a = document.getElementsByTagName('input')[0];
+			var X = a.attributes.removeNamedItem("value");
+			var b = document.getElementsByTagName('i')[0];
+			var y = document.createAttribute("class");
+			y.value = "contohstyle";
+			b.attributes.setNamedItem(y);
 			document.getElementById("valueID").innerHTML = "value";
 		}
 	</script>
